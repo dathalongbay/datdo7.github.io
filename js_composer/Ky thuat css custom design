@@ -1,0 +1,6 @@
+$css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, ' ' . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
+
+$css_class = trim( preg_replace( '/\s+/', ' ', $css_class ) );
+
+// nghien cuu vc custom heading
+// extract( $this->getStyles( $el_class . $this->getCSSAnimation( $css_animation ), $css, $google_fonts_data, $font_container_data, $atts ) );
