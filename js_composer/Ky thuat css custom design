@@ -1,6 +1,20 @@
+<?php 
 $css_class = apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, ' ' . $el_class . vc_shortcode_custom_css_class( $css, ' ' ), $this->settings['base'], $atts );
 
 $css_class = trim( preg_replace( '/\s+/', ' ', $css_class ) );
 
 // nghien cuu vc custom heading
 // extract( $this->getStyles( $el_class . $this->getCSSAnimation( $css_animation ), $css, $google_fonts_data, $font_container_data, $atts ) );
+
+?>
+<div class="wp-elm wp_counver_box <?php echo $css_class; ?>">
+    <?php if ($icon) : ?>
+        <i class="fa-star element-icon"></i>
+    <?php endif; ?>
+    <?php if ($targeted_number) : ?>
+        <div class="counter-up" data-count="<?php echo $targeted_number; ?>">0</div>
+    <?php endif; ?>
+    <?php if ($label) : ?>
+        <div class="conter-label"><?php echo $label; ?></div>
+    <?php endif; ?>
+</div>
