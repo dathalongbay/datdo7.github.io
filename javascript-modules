@@ -1,0 +1,34 @@
+<script type="text/javascript">
+
+    var myvne = 'shop.vnexpress';
+
+    var myGradesCalculate = (function (abc) {
+
+        // Chúng ta để các biến này ở private trong closure scope
+        var myGrades = [93, 95, 88, 0, 55, 91];
+
+        var average = function() {
+            //alert('average');
+            $('body').append(111);
+            abc = 11;
+            console.log(abc);
+        };
+
+        var failing = function() {
+           //('failing');
+        };
+
+        return {
+            average: average,
+            failing: failing
+        }
+    })(myvne);
+
+
+    myGradesCalculate.failing(); // 'You failed 2 times.'
+    myGradesCalculate.average(); // 'Your average grade is 70.33333333333333.'
+
+
+	console.log(myvne);
+
+</script>
